@@ -14,8 +14,8 @@ class CreateSystemAdminsTable extends Migration
     public function up()
     {
         Schema::create('system_admins', function (Blueprint $table) {
-            $table->bigIncrements('s_id')->unique();
-            $table->string('email',100)->unique();
+            $table->increments('s_id');
+            $table->string('email',100);
             $table->foreign('email')->references('email')->on('people');
             $table->timestamps();
         });

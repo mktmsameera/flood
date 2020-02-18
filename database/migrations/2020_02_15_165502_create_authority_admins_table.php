@@ -14,8 +14,8 @@ class CreateAuthorityAdminsTable extends Migration
     public function up()
     {
         Schema::create('authority_admins', function (Blueprint $table) {
-            $table->bigIncrements('a_id');
-            $table->string('email',100)->unique();
+            $table->increments('a_id');
+            $table->string('email',100);
             $table->foreign('email')->references('email')->on('people');
             $table->string('department',100);
             $table->timestamps();

@@ -32,4 +32,5 @@ class CreateFeedbackTable extends Migration
     {
         Schema::dropIfExists('feedback');
     }
+    
 }
